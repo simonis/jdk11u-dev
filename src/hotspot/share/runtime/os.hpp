@@ -491,6 +491,7 @@ class os: AllStatic {
     java_thread,       // Java, CodeCacheSweeper, JVMTIAgent and Service threads.
     compiler_thread,
     watcher_thread,
+    asyncperf_thread,  // dedicated to writing hsperf counters with -XX:+PerfAsyncSharedMem
     os_thread
   };
 

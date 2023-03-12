@@ -2430,6 +2430,10 @@ define_pd_global(uint64_t,MaxRAM,                    1ULL*G);
           range(PeriodicTask::min_interval, max_jint)                       \
           constraint(PerfDataSamplingIntervalFunc, AfterErgo)               \
                                                                             \
+  product(bool, PerfAsyncSharedMem, false,                                  \
+          "Store performance data in shared memory but write it "           \
+          "asynchronuously")                                                \
+                                                                            \
   product(bool, PerfDisableSharedMem, false,                                \
           "Store performance data in standard memory")                      \
                                                                             \
